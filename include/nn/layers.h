@@ -27,5 +27,12 @@ typedef struct {
 } BatchNorm2DLayer;
 
 // write the forward pass functions 
+void conv2d_forward(Tensor* input,Conv2DLayer *layer,Tensor* output);
+
+void batchnorm2d_forward(Tensor* input,BatchNorm2DLayer* layer,Tensor* output);
+
+void leaky_relu_forward(Tensor* tensor,float alpha);
+
+void maxpool2d_forward(Tensor* input,MaxPool2DLayer*layer,Tensor* output);
 
 #endif
